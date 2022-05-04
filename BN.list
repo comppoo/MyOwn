@@ -12,3 +12,6 @@ DOMAIN-SUFFIX,siftscience.com
 
 DOMAIN-SUFFIX,appsflyer.com
 DOMAIN-SUFFIX,app-measurement.com
+
+IP-CIDR,54.249.176.243/24
+IP-CIDR,54.150.182.86/24
