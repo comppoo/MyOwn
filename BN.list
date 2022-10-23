@@ -1,14 +1,18 @@
+
+DOMAIN-KEYWORD, mokexapp
+DOMAIN-KEYWORD,binance
+DOMAIN-KEYWORD,bnappzh
+DOMAIN-KEYWORD,bnbzh
+DOMAIN-KEYWORD,saasexch
+DOMAIN-KEYWORD,commonservice
+
 DOMAIN-SUFFIX,binance.com
 DOMAIN-SUFFIX,binance.im
 DOMAIN-SUFFIX,binance.me
 
-DOMAIN-KEYWORD, mokexapp
-
-DOMAIN-KEYWORD,binance
-DOMAIN-KEYWORD,bnappzh
-DOMAIN-KEYWORD,bnbzh
 DOMAIN-SUFFIX,bntrace.com
 DOMAIN-SUFFIX,bnbstatic.com
+
 
 DOMAIN-SUFFIX,online-metrix.net
 DOMAIN-SUFFIX,riskified.com
