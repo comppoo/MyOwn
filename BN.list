@@ -1,5 +1,5 @@
 
-DOMAIN-KEYWORD, mokexapp
+DOMAIN-KEYWORD,mokexapp
 DOMAIN-KEYWORD,binance
 DOMAIN-KEYWORD,bnappzh
 DOMAIN-KEYWORD,bnbzh
@@ -24,3 +24,13 @@ DOMAIN-SUFFIX,app-measurement.com
 
 IP-CIDR,54.249.176.243/24
 IP-CIDR,54.150.182.86/24
+
+#IP-CIDR,54.249.176.243/32
+#DOMAIN,domain-config-1306379396.file.myqcloud.com
+#DOMAIN,public-1306379396.file.myqcloud.com
+#DOMAIN,static-file-1306379396.file.myqcloud.com
+#DOMAIN-SUFFIX,googleapis.com
+
+IP-CIDR,123.56.127.8/32,
+IP-CIDR,47.101.151.69/32,
+DOMAIN-SUFFIX,yingwangtech.net
