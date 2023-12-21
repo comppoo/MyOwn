@@ -38,14 +38,14 @@ URL-REGEX,^https?://tqt\.weibo\.cn/user/pay/
 URL-REGEX,^https?://tqt\.weibo\.cn/ad/
 URL-REGEX,^https?://tqt\.weibo\.cn/business/advert/
 URL-REGEX,^https?://tqt\.weibo\.cn/launch/collect/
-URL-REGEX,^https?://tqt\.weibo\.cn/data/
+#URL-REGEX,^https?://tqt\.weibo\.cn/data/
 URL-REGEX,^https?://tqt\.weibo\.cn/data/collect/
 URL-REGEX,^https?://tqt\.weibo\.cn/overall/
 
 URL-REGEX,^https?://tqt\.weibo\.cn/ad/conf?
 URL-REGEX,^https?://tqt\.weibo\.cn/business/advert/config\.php\?
 URL-REGEX,^https?://tqt\.weibo\.cn/launch/collect\.php\?
-URL-REGEX,^https?://tqt\.weibo\.cn/launch\.php\?
+#URL-REGEX,^https?://tqt\.weibo\.cn/launch\.php\?
 URL-REGEX,^https?://tqt\.weibo\.cn/data/collect\.php\?
 URL-REGEX,^https?://tqt\.weibo\.cn/overall/redirect\.php\?=tqt_apiad
 URL-REGEX,^https?://tqt\.weibo\.cn/overall/redirect\.php\?
