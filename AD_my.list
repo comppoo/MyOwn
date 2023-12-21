@@ -39,12 +39,13 @@ URL-REGEX,^https?://tqt\.weibo\.cn/ad/,REJECT
 URL-REGEX,^https?://tqt\.weibo\.cn/business/advert/,REJECT
 URL-REGEX,^https?://tqt\.weibo\.cn/launch/collect/,REJECT
 URL-REGEX,^https?://tqt\.weibo\.cn/data/,REJECT
-URL-REGEX,^https?://tqt\.weibo\.cn/data/collect/
+URL-REGEX,^https?://tqt\.weibo\.cn/data/collect/,REJECT
 URL-REGEX,^https?://tqt\.weibo\.cn/overall/,REJECT
 
 URL-REGEX,^https?://tqt\.weibo\.cn/ad/conf?,REJECT
-URL-REGEX,^https?://tqt\.weibo\.cn/business/advert/config\.php?,REJECT
-URL-REGEX,^https?://tqt\.weibo\.cn/launch/collect\.php?,REJECT
-URL-REGEX,^https?://tqt\.weibo\.cn/launch\.php?,REJECT
-URL-REGEX,^https?://tqt\.weibo\.cn/data/collect\.php?,REJECT
-URL-REGEX,^https?://tqt\.weibo\.cn/overall/redirect\.php?,REJECT
+URL-REGEX,^https?://tqt\.weibo\.cn/business/advert/config\.php\?,REJECT
+URL-REGEX,^https?://tqt\.weibo\.cn/launch/collect\.php\?,REJECT
+URL-REGEX,^https?://tqt\.weibo\.cn/launch\.php\?,REJECT
+URL-REGEX,^https?://tqt\.weibo\.cn/data/collect\.php\?,REJECT
+URL-REGEX,^https?://tqt\.weibo\.cn/overall/redirect\.php\?=tqt_apiad,REJECT
+URL-REGEX,^https?://tqt\.weibo\.cn/overall/redirect\.php\?,REJECT
