@@ -43,7 +43,8 @@ URL-REGEX,^https?://tqt\.weibo\.cn/overall/,REJECT
 
 
 URL-REGEX,^https?://tqt\.weibo\.cn/ad/conf?,REJECT
-URL-REGEX,^https?://tqt\.weibo\.cn/business/advert/config\.php,REJECT
-URL-REGEX,^https?://tqt\.weibo\.cn/launch/collect\.php,REJECT
-URL-REGEX,^https?://tqt\.weibo\.cn/data/collect\.php,REJECT
-URL-REGEX,^https?://tqt\.weibo\.cn/overall/redirect\.php,REJECT
+URL-REGEX,^https?://tqt\.weibo\.cn/business/advert/config\.php?,REJECT
+URL-REGEX,^https?://tqt\.weibo\.cn/launch/collect\.php?,REJECT
+URL-REGEX,^https?://tqt\.weibo\.cn/launch\.php?,REJECT
+URL-REGEX,^https?://tqt\.weibo\.cn/data/collect\.php?,REJECT
+URL-REGEX,^https?://tqt\.weibo\.cn/overall/redirect\.php?,REJECT
