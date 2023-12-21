@@ -22,10 +22,10 @@ DOMAIN-SUFFIX,cl2m.cn
 DOMAIN-SUFFIX,mlogcn.com
 DOMAIN-SUFFIX,cqdingyan.com
 DOMAIN-SUFFIX,cl2009.com
-DOMAIN-SUFFIX,anythinktech.com-IMG
+DOMAIN-SUFFIX,anythinktech.com
 IP-CIDR,114.132.165.205/32
-DOMAIN-SUFFIX,nineton.cn-IMG
-DOMAIN-SUFFIX,toponad.com-IMG
+DOMAIN-SUFFIX,nineton.cn
+DOMAIN-SUFFIX,toponad.com
 
 #最美天气
 URL-REGEX,^https?://bs\.zuimeitianqi\.com/ad
