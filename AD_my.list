@@ -27,6 +27,9 @@ IP-CIDR,114.132.165.205/32,REJECT
 DOMAIN-SUFFIX,nineton.cn,REJECT-IMG
 DOMAIN-SUFFIX,toponad.com,REJECT-IMG
 
+#最美天气
+URL-REGEX,^https?://bs\.zuimeitianqi\.com/ad,REJECT
+
 #天气通
 URL-REGEX,^https?://tqt\.weibo\.cn/launch,REJECT
 URL-REGEX,^https?://tqt\.weibo\.cn/ad,REJECT
