@@ -1,6 +1,6 @@
 
 #forsightnews
-URL-REGEX,^http?://api\.foresightnews\.pro/v1/app/version
+URL-REGEX,^https?://api\.foresightnews\.pro/v1/app/splash
 
 #天气预报软件
 DOMAIN-SUFFIX,yximgs.com
