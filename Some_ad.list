@@ -1,3 +1,6 @@
+#bitfr
+URL-REGEX,^https?://bitfrog\.liuning\.cc/app/common/config/banner?
+
 
 #forsightnews
 URL-REGEX,^https?://api\.foresightnews\.pro/v1/app/splash
