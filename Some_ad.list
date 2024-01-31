@@ -2,11 +2,11 @@
 #URL-REGEX,^https?://bitfrog\.liuning\.cc/app/common/config
 
 
-#forsightnews
+#forsi+ghtnews
 URL-REGEX,^https?://api\.foresightnews\.pro/v1/app/splash
 URL-REGEX,^https?://api\.foresightnews\.pro/v1/app/version
 
-#天气预报软件
+#天气预+报软件
 DOMAIN-SUFFIX,yximgs.com
 DOMAIN-SUFFIX,adcdn.ccqyj.com
 DOMAIN-SUFFIX,v2-ad.video.yximgs.com
@@ -35,10 +35,10 @@ IP-CIDR,114.132.165.205/32
 DOMAIN-SUFFIX,nineton.cn
 DOMAIN-SUFFIX,toponad.com
 
-#最美天气
+#最+美+天气
 URL-REGEX,^https?://bs\.zuimeitianqi\.com/ad
 
-#天气通
+#天+气+通
 #URL-REGEX,^https?://tqt\.weibo\.cn/launch/
 #URL-REGEX,^https?://tqt\.weibo\.cn/app/
 #URL-REGEX,^https?://tqt\.weibo\.cn/user/pay/
