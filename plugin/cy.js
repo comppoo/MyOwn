@@ -72,7 +72,7 @@ if (typeof $response == "undefined") {
       chxm1023["privileges"] = [{  "vip_type" : "svip",  "subscription_chat_quota" : 999  }];
       break;
     case topUrl.test(url):
-      chxm1023["data"] = [{  "badge_type" : "",  "title" : "叮当猫",  "url" : "https://t.me/chxm1023",  "feature_type" : "",  "avatar" : "https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/ddm2.png"  },...chxm1023.data];
+      chxm1023["data"] = [{  "badge_type" : "",  "title" : "叮当猫",  "url" : "https://t",  "feature_type" : "",  "avatar" : "https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/ddm2.png"  },...chxm1023.data];
       break;
     }
   chxm1024.body = JSON.stringify(chxm1023);
