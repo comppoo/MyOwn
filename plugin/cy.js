@@ -12,9 +12,9 @@
 
 [rewrite_local]
 # VIP信息
-^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners|ai\/weather|operation\/homefeatures)|p\/v\d\/(vip_info|user_info|entries|privileges)) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyun.js
+^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners|ai\/weather|operation\/homefeatures)|p\/v\d\/(vip_info|user_info|entries|privileges)) url script-response-body https://raw.githubusercontent.com/comppoo/MyOwn/main/plugin/cy.js
 # SVIP地图-48小时预报 
-^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images) url script-request-header https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyun.js
+^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images) url script-request-header https://raw.githubusercontent.com/comppoo/MyOwn/main/plugin/cy.js
 
 [mitm]
 hostname = *.cyapi.cn, *.caiyunapp.com
@@ -66,7 +66,7 @@ if (typeof $response == "undefined") {
       chxm1023.free_quota = 999;
       break;
     case qyUrl.test(url):
-      chxm1023["entries"] = [{  "url" : "https://t.me/chxm1023",  "id" : 1,  "name" : "叮当猫",  "type" : 1,  "pos" : 2  }];
+      chxm1023["entries"] = [{  "url" : "https://t",  "id" : 1,  "name" : "叮当猫",  "type" : 1,  "pos" : 2  }];
       break;
     case peUrl.test(url):
       chxm1023["privileges"] = [{  "vip_type" : "svip",  "subscription_chat_quota" : 999  }];
