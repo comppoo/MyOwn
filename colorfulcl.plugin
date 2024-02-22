@@ -1,9 +1,21 @@
-#!name=彩云SVIP
-#!desc=彩云
-#!homepage=https://yfamily.ml
+#!name=彩云 P
+
+#!desc=彩云 
+
+#!homepage=https://whatshub.top
+
 #!author= ddgksf2013
+
 #!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/caiyun.png
 
+[MITM]
+
 hostname=*.caiyunapp.*,*cyapi*
-^http[s]?:\/\/biz\.(caiyunapp|cyapi)\.(com|cn)\/v2\/user.*$ url script-response-body https://raw.githubusercontent.com/comppoo/MyOwn/main/cy.js
-^https:\/\/ad\.caiyunapp\.com\/ url reject
+
+[Script]
+
+http-response ^http[s]?:\/\/biz\.(caiyunapp|cyapi)\.(com|cn)\/v2\/user.*$ requires-body=1,script-path=https://raw.githubusercontent.com/comppoo/MyOwn/main/cy.js
+
+[URL Rewrite]
+
+^https:\/\/ad\.caiyunapp\.com\/ reject
