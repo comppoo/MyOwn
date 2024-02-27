@@ -1,81 +1,128 @@
-/*************************************
 
-项目名称：彩 
-下载地址：https 
-版本支持：7.11.0
-更新日期：2024-02-07
-脚本作者： 3
-电报频道：h 
-使用声明：⚠️仅供参考，🈲转载与售卖！
+var body = $response.body;
+var url = $request.url;
+var obj = JSON.parse(body);
 
-**************************************
+const p1 = '/v1/user_info';
+const p2 = '/v2/user';
 
-[rewrite_local]
-# VIP信息
-^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners|ai\/weather|operation\/homefeatures)|p\/v\d\/(vip_info|user_info|entries|privileges)) url script-response-body https://raw.githubusercontent.com/comppoo/MyOwn/main/plugin/cy.js
-# SVIP地图-48小时预报 
-^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images) url script-request-header https://raw.githubusercontent.com/comppoo/MyOwn/main/plugin/cy.js
-
-[mitm]
-hostname = *.cyapi.cn, *.caiyunapp.com
-
-*************************************/
-
-
-const chxm1024 = {};
-const chxm1023 = JSON.parse(typeof $response != "undefined" && $response.body || null);
-const url = $request.url;
-const adUrl = /(activity\?app_name|operation\/banners)/;
-const vipUrl = /https:\/\/biz\.(cyapi\.cn|caiyunapp\.com)\/p\/v\d\/vip_info/;
-const userUrl = /https:\/\/biz\.(cyapi\.cn|caiyunapp\.com)\/v\d\/user\?app_name/;
-const infoUrl = /https:\/\/biz\.(cyapi\.cn|caiyunapp\.com)\/p\/v\d\/user_info/;
-const aiUrl = /ai\/weather\/quotas/;
-const qyUrl = /entries/;
-const peUrl = /privileges/;
-const topUrl = /operation\/homefeatures/;
-
-if (typeof $response == "undefined") {
-  chxm1024.headers = $request.headers;
-  chxm1024.headers['device-token'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uIjoiNjViYzc1NzAwYTBkNTYwMDFiZmJkODhjIiwidXNlcl9pZCI6IjVmODNhMDY3MTk5NzZmMDAxNWEyNTRiNiIsInZlcnNpb24iOjIsImV4cCI6MTcwOTQ4MjAwMCwidmlwX2V4cGlyZWRfYXQiOjAsImlzcyI6IndlYXRoZXIiLCJpYXQiOjE3MDY4OTAwMDAsInN2aXBfZXhwaXJlZF9hdCI6MTcxNDMyMTgxMiwicHJpbWFyeSI6dHJ1ZX0.v41eOWgj4FmMMYLygupRLeE2hC8KW_HltSsdFk03oP4';
-} else {
-  switch (true) {
-    case adUrl.test(url):
-      chxm1023.status = "ok";
-      chxm1023.activities = [{"items":[{}]}];
-      chxm1023.data = [];
-      break;
-    case vipUrl.test(url):
-      chxm1023.vip = {  ...chxm1023.vip,
-  "expires_time" : "4092599349",  "is_auto_renewal" : true  };
-      chxm1023.svip =  {  ...chxm1023.svip,  "expires_time" : "4092599349",  "is_auto_renewal" : true  };
-      chxm1023.show_upcoming_renewal = false;
-      break;
-    case userUrl.test(url):
-      chxm1023.result = { ...chxm1023.result,  is_vip: true,  vip_expired_at: 4092599349,  svip_given: 1,  is_xy_vip: true,  xy_svip_expire: 4092599349,  wt: {  ...chxm1023.result.wt,  vip: {  ...chxm1023.result.wt.vip,  "expired_at" : 0,  "enabled" : true,  "svip_apple_expired_at" : 4092599349,  "is_auto_renewal" : true,  "svip_expired_at" : 4092599349    },    svip_given: 1,  },  is_phone_verified: true,  vip_take_effect: 1,  is_primary: true,  xy_vip_expire: 4092599349,  svip_expired_at: 4092599349,  svip_take_effect: 1,  vip_type: "s",  };
-      break;
-    case infoUrl.test(url):
-      chxm1023["reg_days"] = 99999;
-      break;
-    case aiUrl.test(url):
-      chxm1023.remain = 999;
-      chxm1023.subscription_remain = 999;
-      chxm1023.subscription_quota = 999;
-      chxm1023.addition_remain = 999;
-      chxm1023.subscription_quota_end_time = 4092599349;
-      chxm1023.free_remain = 999;
-      chxm1023.free_quota = 999;
-      break;
-    case qyUrl.test(url):
-      chxm1023["entries"] = [{  "url" : "https://t",  "id" : 1,  "name" : "叮当猫",  "type" : 1,  "pos" : 2  }];
-      break;
-    case peUrl.test(url):
-      chxm1023["privileges"] = [{  "vip_type" : "svip",  "subscription_chat_quota" : 999  }];
-      break;
-    case topUrl.test(url):
-      chxm1023["data"] = [{  "badge_type" : "",  "title" : "叮当猫",  "url" : "https://t",  "feature_type" : "",  "avatar" : "https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/ddm2.png"  },...chxm1023.data];
-      break;
-    }
-  chxm1024.body = JSON.stringify(chxm1023);
+//个人页面
+if (url.indexOf(p1) != -1) {
+    obj.name = "https://t.me/GieGie777";
+    obj.avatar = "https://zdimg.lifeweek.com.cn/app/20230410/16810960185662892.jpg";
+    body = JSON.stringify(obj);
 }
 
-$done(chxm1024);
+//_vip
+if (url.indexOf(p2) != -1) {
+    obj = {
+        "server_time": 1708353391,
+        "result": {
+            "xy_vip_expire": 0,
+            "vip_expired_at": 0.0,
+            "ranking_above": 97.0,
+            "vip_take_effect": 1,
+            "auto_renewal_type": "",
+            "third_party_id": null,
+            "is_kol": false,
+            "svip_expired_at": 32493834549.0,
+            "is_login": false,
+            "is_xy_vip": false,
+            "platform_name": "weixin",
+            "xy_svip_expire": 0,
+            "is_visitor": false,
+            "third_party_ids": ["6406c68989e1a20018905c8d"],
+            "score": 2000,
+            "is_xy_auto_renewal": false,
+            "is_primary": true,
+            "phone_num": "17083544841",
+            "free_trial": 10,
+            "last_acted_at": 1699229543.0828011036,
+            "vip_type": "s",
+            "is_phone_verified": true,
+            "wt": {
+                "ranking_above": 97.0,
+                "created_at": 1599863895.1142549515,
+                "last_acted_at": 1699229543.0828011036,
+                "vip": {
+                    "svip_apple_expired_at": 1692783499,
+                    "enabled": true,
+                    "is_auto_renewal": true,
+                    "auto_renewal_type": "",
+                    "svip_auto_renewal_type": "month",
+                    "svip_expired_at": 1851501031.0,
+                    "expired_at": 0.0
+                },
+                "svip_given": 1825,
+                "free_trial": 10,
+                "is_login": false
+            },
+            "device_id": "0D5E89DC-78F7-40A8-9348-E5BD077236C8-1699229500",
+            "name": "https://t.me/GieGie777",
+            "svip_take_effect": 1,
+            "bound_status": {
+                "qq": {
+                    "username": "",
+                    "is_bound": false,
+                    "id": ""
+                },
+                "weibo": {
+                    "username": "",
+                    "is_bound": false,
+                    "id": ""
+                },
+                "google": {
+                    "username": "",
+                    "is_bound": false,
+                    "id": ""
+                },
+                "apple": {
+                    "username": "",
+                    "is_bound": true,
+                    "id": "6406c68989e1a20018905c8d"
+                },
+                "weixin": {
+                    "username": "https://t.me/GieGie777",
+                    "is_bound": true,
+                    "id": "5f5bfc57d2c6890014e26bb8"
+                },
+                "caiyun": {
+                    "username": "",
+                    "is_bound": false,
+                    "id": ""
+                },
+                "twitter": {
+                    "username": "",
+                    "is_bound": false,
+                    "id": ""
+                },
+                "facebook": {
+                    "username": "",
+                    "is_bound": false,
+                    "id": ""
+                }
+            },
+            "created_at": 1599863895.1142361164,
+            "is_auto_renewal": true,
+            "hasBeenInvited": true,
+            "platform_id": "o3rJ_t00r0mxqS6GCVWMaVtEFLUk",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uIjoiNjVkMzY2OTRmY2FjMDgwMDE0NDlkODMzIiwidXNlcl9pZCI6IjVmNWJmYzU3ZDJjNjg5MDAxNGUyNmJiOCIsInZlcnNpb24iOjIsImV4cCI6MTcxNjEyOTE3MiwidmlwX2V4cGlyZWRfYXQiOjAsImlzcyI6IndlYXRoZXIiLCJpYXQiOjE3MDgzNTMxNzIsInN2aXBfZXhwaXJlZF9hdCI6MTg1MTUwMTAzMSwicHJpbWFyeSI6dHJ1ZX0.U_LCYNGl3cbBCpjrnjmxYBAuNFSvNCe3dKIrV1MGpzo",
+            "svip_given": 1825,
+            "avatar": "https://avatar.caiyuncdn.com/avatar/39cff6272f6e133d731fc6fda973e533-1708017050091.jpg",
+            "is_vip": true,
+            "gender": null,
+            "_id": "5f5bfc57d2c6890014e26bb8"
+        },
+        "rc": 0
+    }
+    $done({
+        body:  JSON.stringify(obj)
+    });
+    body = JSON.stringify(obj);
+}
+
+
+
+$done({
+    body
+});
