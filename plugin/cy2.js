@@ -1,25 +1,3 @@
-/*
- *
- *
-脚本功能：彩云天气
-软件版本：++
-下载地址：苹果商店下载
-脚本作者：
-更新时间：2024年2月20日 06:47
-电报频道：https://t.me/GieGie777
-问题反馈：
-使用声明：此脚本仅供学习与交流，请在下载使用24小时内删除！请勿在中国大陆转载与贩卖！
-*******************************
-[rewrite_local]
-
-# > 彩云天气 解锁vip
-^https?:\/\/biz.cyapi.cn\/(p\/v1\/user_info|v2\/user).*$ url script-response-body https://raw.githubusercontent.com/WeiGiegie/666/main/cytq.js
-
-[mitm] 
-hostname = biz.cyapi.cn
-*
-*
-*/
 var body = $response.body;
 var url = $request.url;
 var obj = JSON.parse(body);
