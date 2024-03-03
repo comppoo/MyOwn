@@ -21,7 +21,7 @@ const p2 = '/v2/user';
 
 //个人页面
 if (url.indexOf(p1) != -1) {
-    obj.name = "https://t.me/GieGie777";
+    obj.name = "https://t.m";
     obj.avatar = "https://zdimg.lifeweek.com.cn/app/20230410/16810960185662892.jpg";
     body = JSON.stringify(obj);
 }
@@ -71,7 +71,7 @@ if (url.indexOf(p2) != -1) {
                 "is_login": false
             },
             "device_id": "0D5E89DC-78F7-40A8-9348-E5BD077236C8-1699229500",
-            "name": "https://t.me/GieGie777",
+            "name": "https://t.m",
             "svip_take_effect": 1,
             "bound_status": {
                 "qq": {
@@ -95,7 +95,7 @@ if (url.indexOf(p2) != -1) {
                     "id": "6406c68989e1a20018905c8d"
                 },
                 "weixin": {
-                    "username": "https://t.me/GieGie777",
+                    "username": "https://t.m",
                     "is_bound": true,
                     "id": "5f5bfc57d2c6890014e26bb8"
                 },
