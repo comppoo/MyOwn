@@ -4,6 +4,7 @@ DOMAIN-KEYWORD,bnappzh
 DOMAIN-KEYWORD,bnbzh
 DOMAIN-KEYWORD,saasexch
 DOMAIN-KEYWORD,commonservice
+DOMAIN-KEYWORD,yingwangtech
 
 DOMAIN-SUFFIX,binance.com
 DOMAIN-SUFFIX,binance.im
@@ -30,11 +31,11 @@ DOMAIN-SUFFIX,bntrace.com
 DOMAIN-SUFFIX,saasexch.cc
 DOMAIN-SUFFIX,saasexch.com
 
-DOMAIN-SUFFIX,app-measurement.com
+#DOMAIN-SUFFIX,app-measurement.com
 #DOMAIN,domain-config-1306379396.file.myqcloud.com
 #DOMAIN,public-1306379396.file.myqcloud.com
 #DOMAIN,static-file-1306379396.file.myqcloud.com
-DOMAIN-SUFFIX,yingwangtech.net
+#DOMAIN-SUFFIX,yingwangtech.net
 
 
 #IP-CIDR,54.150.182.86/24
