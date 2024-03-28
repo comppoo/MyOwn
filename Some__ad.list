@@ -1,3 +1,8 @@
+#mail maste
+URL-REGEX,^https?+:\/\/appconf\.mail\.163\.com\/mmad\/ 
+URL-REGEX,https:\/\/appconf\.mail\.163\.com\/mmad\/get\.do
+URL-REGEX,http:\/\/analytics\.163\.com\/ntes
+
 #bitfr
 #URL-REGEX,^https?://bitfrog\.liuning\.cc/app/common/config
 
